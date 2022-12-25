@@ -1,0 +1,20 @@
+name: CICD-Deploy-AWS-S3Bucket
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  ci_part:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Clone Git Repository
+      uses: actions/checkout@v1
+      
+    - name: check position
+      run : pwd
+      
+    - name: list directory
+      run : ls -al
