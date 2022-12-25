@@ -1,4 +1,7 @@
 name: CICD-Deploy-AWS-S3Bucket
+env:
+  AWS_S3_BUCKET_NAME: "git-actions-devops"
+  AWS_REGION_NAME   : "eu-central-1"
 
 on:
   push:
@@ -19,5 +22,22 @@ jobs:
     - name: List Directory
       run : ls -al
       
-    - name: AWS AUTHENFICATION
+    - name: AWS VERSION
       run : aws --version
+    
+    - name: AWS AUTHENFICATION
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ env.AWS_REGION_NAME }}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
