@@ -2,7 +2,7 @@ name: CICD-Deploy-AWS-S3Bucket
 env:
   AWS_S3_BUCKET_NAME: "git-actions-devops"
   AWS_REGION_NAME   : "eu-central-1"
-
+  NAME_OF_SPECIALIST: "Completed by Junior DevOps Engineer Maksym Mochaliuk 25 Dec 17:21 2022."
 on:
   push:
     branches: 
@@ -34,6 +34,17 @@ jobs:
     
     - name: DEPLOY TO AWS S3 BUCKET
       run: aws s3 sync . s3://git-actions-devops 
+
+  Finish:
+    runs-on: ubuntu-latest
+    needs: [ci_part]    
+    steps:
+      - name: Print Response and Feedback
+        run : |
+          echo "STATUS -----> DONE"
+          echo "${{ env.NAME_OF_SPECIALIST }}"
+          
+
       
       
       
