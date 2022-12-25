@@ -13,8 +13,11 @@ jobs:
     - name: Clone Git Repository
       uses: actions/checkout@v1
       
-    - name: check position
+    - name: Check Position
       run : pwd
       
-    - name: list directory
+    - name: List Directory
       run : ls -al
+      
+    - name: AWS AUTHENFICATION
+      run : aws --version
