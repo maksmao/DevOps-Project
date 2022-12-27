@@ -6,6 +6,6 @@ Status of Last Deployment:<br>
 
 Completed by Junior DevOps Engineer Maksym Mochaliuk 25 Dec 17:21 2022.
      
-<img src="http://git-actions-devops.s3-website.eu-central-1.amazonaws.com/img/cards/Group5.png">
+<img src="https://logosss.s3.eu-central-1.amazonaws.com/Group5.png">
      
 
